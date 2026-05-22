@@ -21,12 +21,15 @@ body {
   background: var(--paper);
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.45;
+  overflow-x: hidden;
 }
 
 .page {
+  width: 100%;
   max-width: 1220px;
   margin: 0 auto;
   padding: 32px;
+  overflow-x: hidden;
 }
 
 .hero {
@@ -36,6 +39,10 @@ body {
   align-items: stretch;
   padding-bottom: 28px;
   border-bottom: 2px solid var(--ink);
+}
+
+.hero > * {
+  min-width: 0;
 }
 
 .eyebrow,
@@ -60,6 +67,7 @@ h1 {
   font-size: 46px;
   line-height: 1.06;
   letter-spacing: 0;
+  overflow-wrap: break-word;
 }
 
 h2 {
@@ -134,15 +142,21 @@ h2 {
 }
 
 .visual-proof {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
   margin: 0;
   padding: 14px;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
+  overflow: hidden;
 }
 
 .visual-proof img {
   display: block;
+  min-width: 0;
+  max-width: 100%;
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
@@ -188,6 +202,7 @@ h2 {
 }
 
 .proof-card {
+  min-width: 0;
   min-height: 374px;
   padding: 22px;
   background: var(--panel);
@@ -461,5 +476,34 @@ footer {
 
   .flow-line {
     display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .page {
+    max-width: 390px;
+    margin: 0;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+    overflow-wrap: anywhere;
+  }
+
+  h2 {
+    font-size: 21px;
+  }
+
+  .lead {
+    font-size: 16px;
+  }
+
+  .hero-actions a {
+    max-width: 100%;
+  }
+
+  .visual-proof {
+    max-width: calc(100vw - 40px);
   }
 }
