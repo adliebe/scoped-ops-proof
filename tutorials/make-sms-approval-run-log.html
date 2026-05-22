@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Written SaaS tutorial sample for Make SMS approval run logs.">
+    <title>Make SMS Approval Run Log Tutorial</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <main class="page tutorial-page">
+      <p class="eyebrow"><a href="../index.html">Proof hub</a> / Tutorial sample</p>
+      <h1>Keep outbound SMS gated by approval state.</h1>
+      <p class="lead">
+        Goal: let a team prepare customer messages without sending anything until the approval field,
+        consent field, and event ID pass a visible gate.
+      </p>
+
+      <section class="tutorial-steps">
+        <article>
+          <h2>1. Required fields</h2>
+          <ul>
+            <li>`event_id`: stable ID used to prevent duplicate sends.</li>
+            <li>`phone`: formatted customer number.</li>
+            <li>`sms_consent`: true or false.</li>
+            <li>`approval_status`: draft, approved, sent, skipped, or failed.</li>
+            <li>`message_body`: approved copy only.</li>
+          </ul>
+        </article>
+        <article>
+          <h2>2. Make scenario</h2>
+          <p>
+            Watch rows, filter for `approval_status = approved`, check consent, check duplicate
+            `event_id`, send through the SMS provider, then write the result back to the run log.
+          </p>
+        </article>
+        <article>
+          <h2>3. Run log</h2>
+          <pre><code>event_id, approval_status, sms_consent, send_status, reason
+evt_001, approved, true, sent, provider accepted
+evt_002, draft, true, skipped, not approved
+evt_003, approved, false, skipped, no consent</code></pre>
+        </article>
+        <article>
+          <h2>4. Handoff note</h2>
+          <p>
+            "The system only sends approved rows with consent. Anything else is logged as skipped with
+            a reason. If a row is edited later, the event ID protects against accidental duplicate sends."
+          </p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

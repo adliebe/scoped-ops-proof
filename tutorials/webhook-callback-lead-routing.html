@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Written SaaS tutorial sample for webhook callback lead routing.">
+    <title>Webhook Callback Lead Routing Tutorial</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <main class="page tutorial-page">
+      <p class="eyebrow"><a href="../index.html">Proof hub</a> / Tutorial sample</p>
+      <h1>Explain a voice-AI callback flow to a non-technical operator.</h1>
+      <p class="lead">
+        Goal: when a buyer submits a demo, quote, or missed-call form, the business should know who
+        asked for help, whether consent exists, what system owns the record, and what has to happen next.
+      </p>
+
+      <section class="tutorial-steps">
+        <article>
+          <h2>1. Map the handoff</h2>
+          <p>
+            Start with one form, one lead owner, one CRM record, and one callback rule. The flow is:
+            form submit, consent check, CRM upsert, owner alert, callback queue, run log.
+          </p>
+        </article>
+        <article>
+          <h2>2. Define the payload</h2>
+          <pre><code>{
+  "event_id": "lead_20260522_001",
+  "source": "pricing_page",
+  "name": "Sample Buyer",
+  "phone": "+15551234567",
+  "consent_to_call": true,
+  "requested_time": "next_business_hour",
+  "service_interest": "after-hours support"
+}</code></pre>
+        </article>
+        <article>
+          <h2>3. Set acceptance checks</h2>
+          <ul>
+            <li>No callback is queued when `consent_to_call` is false.</li>
+            <li>Duplicate `event_id` values update the same lead instead of creating repeats.</li>
+            <li>The owner alert includes source, service interest, and callback status.</li>
+            <li>The run log stores success, skipped, and failed states with timestamps.</li>
+          </ul>
+        </article>
+        <article>
+          <h2>4. Explain it to the operator</h2>
+          <p>
+            "A new lead comes in, the system checks whether we are allowed to call, updates the CRM,
+            tells the owner, and adds the lead to a callback queue. If consent is missing or a duplicate
+            appears, it logs the reason instead of guessing."
+          </p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

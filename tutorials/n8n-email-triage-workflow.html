@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Written SaaS tutorial sample for n8n email triage.">
+    <title>n8n Email Triage Workflow Tutorial</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <main class="page tutorial-page">
+      <p class="eyebrow"><a href="../index.html">Proof hub</a> / Tutorial sample</p>
+      <h1>Turn a shared inbox into a labeled review queue.</h1>
+      <p class="lead">
+        Goal: reduce missed support and sales messages by giving every new email a category, owner,
+        urgency, and visible reason before a human reviews it.
+      </p>
+
+      <section class="tutorial-steps">
+        <article>
+          <h2>1. Inputs</h2>
+          <ul>
+            <li>Message ID, sender, subject, received timestamp, body preview, and attachments flag.</li>
+            <li>Allowed labels: sales, support, billing, urgent, spam, vendor, unknown.</li>
+            <li>Owner map: sales lead, support lead, finance lead, or manual review.</li>
+          </ul>
+        </article>
+        <article>
+          <h2>2. Workflow</h2>
+          <p>
+            Gmail trigger, normalize message fields, classify against the allowed label list, write one
+            row to the review sheet, notify the owner, and store the model or rule reason in the log.
+          </p>
+        </article>
+        <article>
+          <h2>3. Review table</h2>
+          <pre><code>received_at, message_id, label, owner, reason, status
+2026-05-22T09:00Z, msg_001, sales, revenue_owner, pricing request, open
+2026-05-22T09:03Z, msg_002, support, support_owner, login issue, open</code></pre>
+        </article>
+        <article>
+          <h2>4. Acceptance checks</h2>
+          <ul>
+            <li>Every message has exactly one row in the review table.</li>
+            <li>Unknown messages go to manual review instead of being discarded.</li>
+            <li>Owner notifications never include secrets, private keys, or full attachment contents.</li>
+            <li>Weekly reporting can count label volume, open items, and false labels.</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
