@@ -177,6 +177,49 @@ h2 {
   margin: 28px 0;
 }
 
+.catalog-strip {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 470px);
+  gap: 20px;
+  align-items: center;
+  margin: 28px 0;
+  padding: 22px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.catalog-strip p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.catalog-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.catalog-actions a {
+  display: grid;
+  gap: 3px;
+  padding: 14px;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.catalog-actions strong {
+  font-size: 15px;
+}
+
+.catalog-actions span {
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 800;
+}
+
 .metric-row div {
   padding: 18px;
   background: var(--panel);
@@ -459,6 +502,7 @@ footer {
   .proof-grid,
   .offer-grid,
   .metric-row,
+  .catalog-strip,
   .profile-strip,
   .package-strip,
   .tutorial-strip,
