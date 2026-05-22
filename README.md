@@ -2,7 +2,7 @@
 
 Public-safe proof page for fixed-scope paid starts:
 
-- $95-$300 starter slices for small async proof tasks;
+- $75-$300 starter slices for small async proof tasks;
 - workflow repair and lead-routing fixes;
 - spreadsheet cleanup and KPI reporting;
 - business plans and financial models;
