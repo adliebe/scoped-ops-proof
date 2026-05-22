@@ -230,6 +230,10 @@ h2 {
   border-top: 6px solid var(--red);
 }
 
+.api-card {
+  border-top: 6px solid var(--violet);
+}
+
 .security-hero {
   border-bottom-color: var(--red);
 }
