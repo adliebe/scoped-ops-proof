@@ -189,6 +189,57 @@ h2 {
   border-radius: 8px;
 }
 
+.starter-strip {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+  gap: 22px;
+  align-items: stretch;
+  margin: 28px 0;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-left: 6px solid var(--green);
+  border-radius: 8px;
+}
+
+.starter-strip p {
+  color: var(--muted);
+}
+
+.starter-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.starter-grid article {
+  min-height: 150px;
+  padding: 16px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.starter-grid strong,
+.starter-grid span {
+  display: block;
+}
+
+.starter-grid strong {
+  margin-bottom: 6px;
+  font-size: 28px;
+}
+
+.starter-grid span {
+  margin-bottom: 8px;
+  font-weight: 800;
+}
+
+.starter-grid p {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
 .catalog-strip p {
   margin-bottom: 0;
   color: var(--muted);
@@ -502,11 +553,16 @@ footer {
   .proof-grid,
   .offer-grid,
   .metric-row,
+  .starter-strip,
   .catalog-strip,
   .profile-strip,
   .package-strip,
   .tutorial-strip,
   .table-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .starter-grid {
     grid-template-columns: 1fr;
   }
 
