@@ -289,6 +289,31 @@ dd {
   border-radius: 8px;
 }
 
+.profile-strip {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 430px;
+  gap: 24px;
+  margin: 28px 0;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.profile-strip p {
+  max-width: 760px;
+}
+
+.profile-strip ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.profile-strip li + li {
+  margin-top: 8px;
+}
+
 .package-strip p,
 .package-strip li {
   color: #eef2f6;
@@ -343,6 +368,7 @@ footer {
   .proof-grid,
   .offer-grid,
   .metric-row,
+  .profile-strip,
   .package-strip,
   .table-grid {
     grid-template-columns: 1fr;
