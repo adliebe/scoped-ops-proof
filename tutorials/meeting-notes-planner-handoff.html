@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Written workflow sample for meeting summaries, Microsoft Planner task rows, owners, due dates, and review queues.">
+    <title>Meeting Notes To Planner Task Handoff</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <main class="page tutorial-page">
+      <p class="eyebrow"><a href="../index.html">Proof hub</a> / Workflow sample</p>
+      <h1>Turn meeting notes into Planner tasks with owners, due dates, and review checks.</h1>
+      <p class="lead">
+        Goal: every meeting summary should become a clean task table with source links,
+        owner fields, due dates, acceptance checks, and a review queue for unclear items.
+      </p>
+
+      <section class="tutorial-steps">
+        <article>
+          <h2>1. Lock the task contract</h2>
+          <p>
+            The first pass defines the meeting-summary source, accepted task fields,
+            owner rules, date rules, duplicate key, Planner buckets, source-link format,
+            and review states. That keeps the handoff stable even when meeting notes
+            arrive in different formats.
+          </p>
+        </article>
+        <article>
+          <h2>2. Use one canonical task shape</h2>
+          <pre><code>{
+  "meeting_id": "mtg_client_onboarding_001",
+  "action_item_id": "a2",
+  "title": "Send source-file request list",
+  "owner": "Nemo",
+  "due_date": "2026-05-25",
+  "priority": "normal",
+  "status": "ready_for_planner",
+  "source_link": "mailbox://sample/client-onboarding-001-update"
+}</code></pre>
+        </article>
+        <article>
+          <h2>3. Build the first paid slice</h2>
+          <ul>
+            <li>Read one approved meeting-summary source or export.</li>
+            <li>Extract action item, owner, due date, priority, source link, and acceptance check.</li>
+            <li>Merge repeated meeting items into the same task record.</li>
+            <li>Route missing owner or due date to review instead of guessing.</li>
+            <li>Return Planner-ready rows plus a run log and handoff note.</li>
+          </ul>
+        </article>
+        <article>
+          <h2>4. Acceptance checks</h2>
+          <ul>
+            <li>The same meeting item updates the same task instead of duplicating it.</li>
+            <li>Missing owners and due dates create review rows.</li>
+            <li>Every ready task has an owner, due date, source link, and acceptance check.</li>
+            <li>The run log shows created, updated, and review-required states.</li>
+          </ul>
+        </article>
+        <article>
+          <h2>5. Buyer route</h2>
+          <p>
+            A narrow first milestone can start when the meeting-summary source, Planner bucket
+            structure, owner list, and sample notes are clear. The first deliverable is the
+            task contract, import-ready rows, run log, and handoff note.
+          </p>
+          <ul>
+            <li><a href="https://www.freelancer.com/service/excel/hour-form-dashboard-handoff?sb=t">$95 form dashboard handoff</a></li>
+            <li><a href="https://www.freelancer.com/service/zapier/hour-workflow-build-or-repair?sb=t">$500 workflow build or repair</a></li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
