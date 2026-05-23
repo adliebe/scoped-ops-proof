@@ -16,7 +16,7 @@ The page intentionally excludes bank details, payout screenshots, private client
 
 - 24-hour README or install docs cleanup: https://www.freelancer.com/service/technical_writing/hour-readme-or-install-docs-cleanup?sb=t
 - 24-hour workflow or report repair: https://www.freelancer.com/service/excel_vba/hour-workflow-or-report-repair?sb=t
-- n8n workflow repair + handoff notes: https://www.upwork.com/services/product/development-it-an-n8n-workflow-repair-with-tested-handoff-notes-2057889259942910023
+- 48-hour workflow build or repair: https://www.freelancer.com/service/zapier/hour-workflow-build-or-repair?sb=t
 - business plan and financial model: https://www.upwork.com/services/product/consulting-hr-an-investor-ready-business-plan-and-financial-model-with-forecasts-2057624369756503073
 - spreadsheet cleanup and KPI report: https://www.upwork.com/services/product/marketing-a-cleaned-lead-list-with-a-weekly-sales-report-2057587050076830753
 
