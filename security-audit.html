@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Security Review Scope</title>
-    <meta name="description" content="Fixed-scope security reviews for prompt injection, tool boundaries, search exposure, eval gaps, workflow controls, and GitHub implementation fixes.">
+    <meta name="description" content="Fixed-scope security reviews for untrusted inputs, tool boundaries, search exposure, test gaps, workflow controls, and GitHub implementation fixes.">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -12,7 +12,7 @@
       <section class="hero security-hero">
         <div>
           <p class="eyebrow">Security review</p>
-          <h1>Prompt-injection, search exposure, and tool-boundary reviews for teams shipping sensitive workflows.</h1>
+          <h1>Untrusted-input, search exposure, and tool-boundary reviews for teams shipping sensitive workflows.</h1>
           <p class="lead">
             Fixed-scope risk screens and implementation audits for support workflows,
             internal tools, search-backed products, GitHub repos, and approval-gated
@@ -37,7 +37,7 @@
         </div>
         <div>
           <span class="metric">$1,200</span>
-          <span class="label">workflow guardrail report</span>
+          <span class="label">workflow control report</span>
         </div>
         <div>
           <span class="metric">$2,500</span>
@@ -55,18 +55,18 @@
           <h2>Risk screen.</h2>
           <p>
             Review one support flow, search-backed feature, intake path, or workflow surface for obvious
-            prompt-injection paths, unsafe tool calls, leaked context, and missing user-confirmation gates.
+            untrusted-input paths, unsafe tool calls, leaked context, and missing user-confirmation gates.
           </p>
           <dl>
             <div><dt>Price</dt><dd>$500</dd></div>
-            <div><dt>Input</dt><dd>Demo, docs, sample prompts</dd></div>
+            <div><dt>Input</dt><dd>Demo, docs, sample instructions</dd></div>
             <div><dt>Output</dt><dd>Risk memo + fix list</dd></div>
           </dl>
         </article>
 
         <article class="proof-card workflow-card">
           <p class="tag">Workflow</p>
-          <h2>Guardrail report.</h2>
+          <h2>Control report.</h2>
           <p>
             Map the business process, data boundary, tool permissions, human approval steps,
             logging gaps, and failure cases for one workflow before it handles sensitive work.
@@ -82,8 +82,8 @@
           <p class="tag">Search-backed</p>
           <h2>Implementation audit pack.</h2>
           <p>
-            Inspect retrieval behavior, tool schemas, prompt boundaries, authorization checks,
-            eval traces, logging, and mitigation paths using authorized material only.
+            Inspect search behavior, tool schemas, instruction boundaries, authorization checks,
+            test traces, logging, and mitigation paths using authorized material only.
           </p>
           <dl>
             <div><dt>Price</dt><dd>$2,500</dd></div>
@@ -110,10 +110,10 @@
       <section class="proof-table" aria-label="Security audit checks">
         <h2>What Gets Checked</h2>
         <div class="table-grid">
-          <p><strong>Prompt injection</strong><span>Hostile instructions, retrieved-text attacks, override attempts, and untrusted content boundaries.</span></p>
+          <p><strong>Untrusted inputs</strong><span>Hostile instructions, external-text attacks, override attempts, and untrusted content boundaries.</span></p>
           <p><strong>Tool permissions</strong><span>Write actions, external calls, data export paths, approval gates, and least-privilege design.</span></p>
-          <p><strong>RAG exposure</strong><span>Index scope, source filtering, citation integrity, hidden document leakage, and tenant boundary risks.</span></p>
-          <p><strong>Eval gaps</strong><span>Missing regression tests, weak fixtures, unsafe acceptance criteria, and untracked failure modes.</span></p>
+          <p><strong>Search exposure</strong><span>Index scope, source filtering, citation integrity, hidden document leakage, and tenant boundary risks.</span></p>
+          <p><strong>Test gaps</strong><span>Missing regression tests, weak fixtures, unsafe acceptance criteria, and untracked failure modes.</span></p>
           <p><strong>Operational controls</strong><span>Run logs, escalation paths, human review states, rollback notes, and post-fix retest evidence.</span></p>
           <p><strong>Repo hygiene</strong><span>Secrets scanning, dependency risk, CI failures, README gaps, sample data cleanup, and safe demo paths.</span></p>
         </div>

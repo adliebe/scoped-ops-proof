@@ -8,7 +8,7 @@ Public-safe proof page for fixed-scope paid starts:
 - spreadsheet cleanup and KPI reporting;
 - business plans and financial models;
 - n8n, Make, Zapier, CRM, and approval-gated platform architecture.
-- security reviews for prompt injection, search exposure, tool boundaries, eval gaps, and repo fixes.
+- security reviews for untrusted inputs, search exposure, tool boundaries, test gaps, and repo fixes.
 
 The page intentionally excludes bank details, payout screenshots, private client data, production secrets, cookies, and credential exports.
 
