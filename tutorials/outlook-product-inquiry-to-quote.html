@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Written workflow sample for Outlook product inquiries, quotation templates, draft replies, and review queues.">
+    <title>Outlook Product Inquiry To Quote Draft</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <main class="page tutorial-page">
+      <p class="eyebrow"><a href="../index.html">Proof hub</a> / Workflow sample</p>
+      <h1>Turn Outlook product inquiries into quote drafts and review-ready replies.</h1>
+      <p class="lead">
+        Goal: every product inquiry should become one clean quote record, one filled quotation
+        document, and one Outlook draft that a human can review before sending.
+      </p>
+
+      <section class="tutorial-steps">
+        <article>
+          <h2>1. Lock the quote contract</h2>
+          <p>
+            The first pass defines the inquiry inbox, accepted product fields, required customer
+            details, quotation template fields, missing-field rules, folder structure, duplicate key,
+            draft reply template, and review states. That keeps the system useful even when the email
+            is messy or incomplete.
+          </p>
+        </article>
+        <article>
+          <h2>2. Use one canonical inquiry shape</h2>
+          <pre><code>{
+  "event_id": "quote_20260523_001",
+  "mailbox": "sales@sample-company.test",
+  "subject": "Quote request for industrial filters",
+  "company": "Sample Manufacturing",
+  "contact_name": "Jordan Lee",
+  "contact_email": "buyer@example.com",
+  "product_name": "Industrial filter cartridge",
+  "quantity": 120,
+  "delivery_date": "2026-06-14",
+  "missing_fields": [],
+  "quote_status": "ready_for_review"
+}</code></pre>
+        </article>
+        <article>
+          <h2>3. Build the first paid slice</h2>
+          <ul>
+            <li>Read one approved Outlook folder and create a quote record per inquiry.</li>
+            <li>Extract product, quantity, contact, due date, and specification fields into a stable schema.</li>
+            <li>Fill a Word or PDF quotation template using only accepted fields.</li>
+            <li>Create an Outlook draft reply with the quotation attached and the source email linked.</li>
+            <li>Route uncertain or missing fields to review instead of guessing.</li>
+            <li>Write a run-log row for success, duplicate, missing-field, and failed states.</li>
+          </ul>
+        </article>
+        <article>
+          <h2>4. Acceptance checks</h2>
+          <ul>
+            <li>The same inquiry updates the same quote record instead of creating duplicates.</li>
+            <li>The quote template receives the correct product, quantity, contact, and delivery fields.</li>
+            <li>Missing fields create a review item and do not produce a send-ready reply.</li>
+            <li>The Outlook draft stays in Drafts until the buyer's team presses Send.</li>
+            <li>The run log can be filtered by status, product, owner, and failure reason.</li>
+          </ul>
+        </article>
+        <article>
+          <h2>5. Buyer route</h2>
+          <p>
+            A narrow first milestone can be funded when the mailbox, quote template, review rules,
+            and sample inquiry emails are clear. The first deliverable is the working path, quote
+            record schema, run log, and handoff note.
+          </p>
+          <ul>
+            <li><a href="https://www.freelancer.com/service/excel_vba/hour-workflow-or-report-repair?sb=t">$95 workflow or report repair</a></li>
+            <li><a href="https://www.freelancer.com/service/zapier/hour-workflow-build-or-repair?sb=t">$500 workflow build or repair</a></li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
