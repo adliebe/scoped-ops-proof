@@ -11,10 +11,11 @@ Public-safe proof page for fixed-scope paid starts:
 
 The page intentionally excludes bank details, payout screenshots, private client data, production secrets, cookies, and credential exports.
 
-## Live Upwork Project Catalog starts
+## Live marketplace starts
 
+- 24-hour workflow or report repair: https://www.freelancer.com/service/excel_vba/hour-workflow-or-report-repair?sb=t
 - n8n workflow repair + handoff notes: https://www.upwork.com/services/product/development-it-an-n8n-workflow-repair-with-tested-handoff-notes-2057889259942910023
 - business plan and financial model: https://www.upwork.com/services/product/consulting-hr-an-investor-ready-business-plan-and-financial-model-with-forecasts-2057624369756503073
 - spreadsheet cleanup and KPI report: https://www.upwork.com/services/product/marketing-a-cleaned-lead-list-with-a-weekly-sales-report-2057587050076830753
 
-The Upwork catalog tiers are package anchors, not a universal minimum. Use smaller buyer-approved direct or platform-native first slices when that is the fastest clean close.
+The Upwork catalog tiers are package anchors, not a universal minimum. The Freelancer service is the faster $95/24-hour entry point for one clean repair.
