@@ -15,6 +15,8 @@ The page intentionally excludes bank details, payout screenshots, private client
 ## Live marketplace starts
 
 - 24-hour README or install docs cleanup: https://www.freelancer.com/service/technical_writing/hour-readme-or-install-docs-cleanup?sb=t
+- GitHub issue and CI fix proof: https://adliebe.github.io/scoped-ops-proof/tutorials/github-ci-fix-review.html
+- 24-hour GitHub issue or CI fix review: https://www.freelancer.com/service/github/hour-github-issue-or-ci-fix-review?sb=t
 - 24-hour workflow or report repair: https://www.freelancer.com/service/excel_vba/hour-workflow-or-report-repair?sb=t
 - 48-hour workflow build or repair: https://www.freelancer.com/service/zapier/hour-workflow-build-or-repair?sb=t
 - business plan and financial model: https://www.upwork.com/services/product/consulting-hr-an-investor-ready-business-plan-and-financial-model-with-forecasts-2057624369756503073

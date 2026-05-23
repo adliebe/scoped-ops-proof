@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Written sample for a GitHub issue, install error, failing check, dependency blocker, or README handoff review.">
+    <title>GitHub Issue And CI Fix Review</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <main class="page tutorial-page">
+      <p class="eyebrow"><a href="../index.html">Proof hub</a> / Repo review sample</p>
+      <h1>Turn a failing repo, issue, or CI run into a clear fix plan.</h1>
+      <p class="lead">
+        Goal: give the buyer one concise diagnosis, the exact failing command or check, the likely cause,
+        and the smallest repair path that can be implemented or handed to their team.
+      </p>
+
+      <section class="tutorial-steps">
+        <article>
+          <h2>1. Start with the repo contract</h2>
+          <p>
+            The first pass should identify the repo URL, issue link, failing command, runtime versions,
+            expected behavior, current error output, and whether the buyer wants a review note, a patch,
+            or a handoff plan. Public repos or buyer-approved private access only.
+          </p>
+        </article>
+        <article>
+          <h2>2. Use one review record</h2>
+          <pre><code>{
+  "review_id": "repo_review_20260523_001",
+  "repo": "sample-org/sample-app",
+  "surface": "GitHub Actions",
+  "failing_check": "test",
+  "command": "npm test",
+  "error_class": "dependency version mismatch",
+  "impact": "pull requests cannot merge",
+  "next_step": "pin dependency and rerun focused tests",
+  "status": "ready_for_buyer_review"
+}</code></pre>
+        </article>
+        <article>
+          <h2>3. Build the first paid slice</h2>
+          <ul>
+            <li>Reproduce the failing command or read the failing check output.</li>
+            <li>Separate environment problems from code problems.</li>
+            <li>List the smallest likely repair and the acceptance command.</li>
+            <li>Flag risky changes that need maintainer review before implementation.</li>
+            <li>Deliver a short note the buyer can paste into an issue, PR, or task.</li>
+          </ul>
+        </article>
+        <article>
+          <h2>4. Acceptance checks</h2>
+          <ul>
+            <li>The failing surface is named precisely: local command, CI check, install step, dependency, or docs gap.</li>
+            <li>The buyer can see what was reproduced and what was inferred.</li>
+            <li>The recommended fix is small enough for a first paid task.</li>
+            <li>No credentials, secret logs, private tokens, or account screenshots are required.</li>
+          </ul>
+        </article>
+        <article>
+          <h2>5. Buyer route</h2>
+          <p>
+            A narrow first milestone can be bought as a 24-hour GitHub issue or CI review.
+            The first deliverable is the diagnosis, fix plan, and acceptance command.
+          </p>
+          <ul>
+            <li><a href="https://www.freelancer.com/service/github/hour-github-issue-or-ci-fix-review?sb=t">$25 GitHub issue or CI fix review</a></li>
+            <li><a href="https://www.freelancer.com/service/technical_writing/hour-readme-or-install-docs-cleanup?sb=t">$15 README or install docs cleanup</a></li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
