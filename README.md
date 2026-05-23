@@ -4,6 +4,7 @@ Public-safe proof page for fixed-scope paid starts:
 
 - $15-$300 starter slices for small async proof tasks;
 - workflow repair and lead-routing fixes;
+- Google Forms to Sheets, Drive, Calendar, team-alert, and dashboard handoffs;
 - spreadsheet cleanup and KPI reporting;
 - business plans and financial models;
 - n8n, Make, Zapier, CRM, and approval-gated platform architecture.

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Written workflow sample for Google Forms, Drive, Calendar, team alerts, and KPI dashboard handoff.">
+    <title>Form to Dashboard Workflow Sample</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <main class="page tutorial-page">
+      <p class="eyebrow"><a href="../index.html">Proof hub</a> / Workflow sample</p>
+      <h1>Turn a form submission into files, calendar work, team alerts, and a live KPI sheet.</h1>
+      <p class="lead">
+        Goal: every submitted form should create one clean operating record, route files to the
+        right folder, create the right follow-up event, notify the right owner, and leave a run log
+        that proves what happened.
+      </p>
+
+      <section class="tutorial-steps">
+        <article>
+          <h2>1. Start with the operating contract</h2>
+          <p>
+            The first pass should define the source form, required fields, file rules, owner-routing
+            logic, calendar rules, notification channel, duplicate key, and dashboard fields. That
+            prevents the workflow from turning into a pile of disconnected steps.
+          </p>
+        </article>
+        <article>
+          <h2>2. Use one canonical event shape</h2>
+          <pre><code>{
+  "event_id": "form_20260523_001",
+  "submitted_at": "2026-05-23T09:15:00-04:00",
+  "source_form": "new_client_intake",
+  "request_type": "quote",
+  "owner_team": "operations",
+  "priority": "normal",
+  "drive_folder": "Client Intake / 2026 / May",
+  "calendar_action": "create_follow_up",
+  "notify": ["email", "teams"],
+  "dashboard_status": "new"
+}</code></pre>
+        </article>
+        <article>
+          <h2>3. Build the first paid slice</h2>
+          <ul>
+            <li>Capture the form row in Sheets with a stable `event_id`.</li>
+            <li>Move uploads into the agreed Drive folder and store the folder link.</li>
+            <li>Create or skip the calendar event based on the request type.</li>
+            <li>Send the owner alert with the source, owner team, and next action.</li>
+            <li>Write a run-log row for success, skipped, duplicate, and failed states.</li>
+          </ul>
+        </article>
+        <article>
+          <h2>4. Acceptance checks</h2>
+          <ul>
+            <li>Submitting the same `event_id` twice updates the same operating record.</li>
+            <li>Missing required fields are logged and routed for review instead of guessed.</li>
+            <li>Files without a valid folder rule stay in a review queue.</li>
+            <li>The dashboard can show new, waiting, scheduled, completed, and failed work.</li>
+          </ul>
+        </article>
+        <article>
+          <h2>5. Buyer route</h2>
+          <p>
+            A narrow first milestone can be bought as a 24-hour workflow/report repair, a spreadsheet
+            cleanup and KPI report, or a larger workflow build. The first deliverable is the working
+            path plus a run log and handoff note.
+          </p>
+          <ul>
+            <li><a href="https://www.freelancer.com/service/excel_vba/hour-workflow-or-report-repair?sb=t">$95 workflow or report repair</a></li>
+            <li><a href="https://www.freelancer.com/service/excel/hour-spreadsheet-cleanup-and-kpi-report?sb=t">$75 spreadsheet cleanup and KPI report</a></li>
+            <li><a href="https://www.freelancer.com/service/zapier/hour-workflow-build-or-repair?sb=t">$500 workflow build or repair</a></li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
