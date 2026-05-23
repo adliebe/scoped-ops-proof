@@ -6,6 +6,7 @@ Public-safe proof page for fixed-scope paid starts:
 - workflow repair and lead-routing fixes;
 - Google Forms to Sheets, Drive, Calendar, team-alert, and dashboard handoffs;
 - meeting notes to Microsoft Planner task handoffs;
+- PDF and document packets into spreadsheet-ready rows;
 - spreadsheet cleanup and KPI reporting;
 - business plans and financial models;
 - n8n, Make, Zapier, CRM, and approval-gated platform architecture.
@@ -18,6 +19,7 @@ The page intentionally excludes bank details, payout screenshots, private client
 - 24-hour README or install docs cleanup: https://www.freelancer.com/service/technical_writing/hour-readme-or-install-docs-cleanup?sb=t
 - GitHub issue and CI fix proof: https://adliebe.github.io/scoped-ops-proof/tutorials/github-ci-fix-review.html
 - 24-hour GitHub issue or CI fix review: https://www.freelancer.com/service/github/hour-github-issue-or-ci-fix-review?sb=t
+- PDF to spreadsheet proof: https://adliebe.github.io/scoped-ops-proof/tutorials/pdf-to-spreadsheet-extraction.html
 - 24-hour workflow or report repair: https://www.freelancer.com/service/excel_vba/hour-workflow-or-report-repair?sb=t
 - 48-hour workflow build or repair: https://www.freelancer.com/service/zapier/hour-workflow-build-or-repair?sb=t
 - meeting notes to Planner proof: https://adliebe.github.io/scoped-ops-proof/tutorials/meeting-notes-planner-handoff.html

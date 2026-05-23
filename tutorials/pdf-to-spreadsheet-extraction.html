@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Document packet to spreadsheet sample for invoices, statements, forms, orders, review queues, and KPI-ready rows.">
+    <title>PDF To Spreadsheet Sample</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <main class="page tutorial-page">
+      <p class="eyebrow"><a href="../index.html">Proof hub</a> / Document data sample</p>
+      <h1>Turn a PDF packet into clean spreadsheet rows and a review queue.</h1>
+      <p class="lead">
+        Goal: each invoice, statement, form, or order packet becomes a clean row set with source
+        document IDs, page numbers, line items, totals, missing-field flags, and a handoff note.
+      </p>
+
+      <section class="tutorial-steps">
+        <article>
+          <h2>1. Lock the field map</h2>
+          <p>
+            The first pass should define the document type, required columns, source document ID,
+            page reference, vendor or customer field, date field, total field, line-item columns,
+            and review rules for missing or inconsistent values.
+          </p>
+        </article>
+        <article>
+          <h2>2. Use a stable row shape</h2>
+          <pre><code>{
+  "document_id": "INV-1001",
+  "page": 1,
+  "vendor": "Northwind Supplies",
+  "date": "2026-05-01",
+  "purchase_order": "PO-7781",
+  "item_code": "SKU-CLN-25",
+  "description": "Cleaner concentrate",
+  "quantity": 4,
+  "unit_price": 250.00,
+  "line_total": 1000.00,
+  "tax": 80.50,
+  "document_total": 1280.50,
+  "review_status": "ready"
+}</code></pre>
+        </article>
+        <article>
+          <h2>3. Build the first paid slice</h2>
+          <ul>
+            <li>Process one sample packet or one recurring document type.</li>
+            <li>Return clean CSV or Excel-ready rows with source references.</li>
+            <li>Separate ready rows from rows that need buyer review.</li>
+            <li>Compare line items, tax, and document totals where those fields exist.</li>
+            <li>Deliver a short handoff note so the buyer can approve the next batch.</li>
+          </ul>
+        </article>
+        <article>
+          <h2>4. Acceptance checks</h2>
+          <ul>
+            <li>Every row includes document ID and page reference.</li>
+            <li>Missing vendor, date, purchase order, or total is visible in the review queue.</li>
+            <li>Line-item totals are checked against the declared document total.</li>
+            <li>Duplicate document IDs update the same document group instead of creating confusion.</li>
+          </ul>
+        </article>
+        <article>
+          <h2>5. Buyer route</h2>
+          <p>
+            A narrow first milestone can be bought as a 24-hour spreadsheet cleanup and KPI report,
+            or as a 24-hour workflow/report repair when the document rows need to feed another system.
+          </p>
+          <ul>
+            <li><a href="https://www.freelancer.com/service/excel/hour-spreadsheet-cleanup-and-kpi-report?sb=t">$75 spreadsheet cleanup and KPI report</a></li>
+            <li><a href="https://www.freelancer.com/service/excel_vba/hour-workflow-or-report-repair?sb=t">$95 workflow or report repair</a></li>
+            <li><a href="https://www.upwork.com/services/product/marketing-a-cleaned-lead-list-with-a-weekly-sales-report-2057587050076830753">$40-$400 spreadsheet report via Upwork</a></li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
