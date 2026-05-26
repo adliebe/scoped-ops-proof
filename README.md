@@ -8,6 +8,7 @@ Public-safe proof page for fixed-scope paid starts:
 - meeting notes to Microsoft Planner task handoffs;
 - PDF and document packets into spreadsheet-ready rows;
 - spreadsheet cleanup and KPI reporting;
+- AI lead intake, CRM follow-up, dashboard, and workflow handoff proof;
 - business plans and financial models;
 - n8n, Make, Zapier, CRM, and approval-gated platform architecture.
 - security reviews for untrusted inputs, search exposure, tool boundaries, test gaps, and repo fixes.
@@ -22,6 +23,7 @@ The page intentionally excludes bank details, payout screenshots, private client
 - PDF to spreadsheet proof: https://adliebe.github.io/scoped-ops-proof/tutorials/pdf-to-spreadsheet-extraction.html
 - 24-hour workflow or report repair: https://www.freelancer.com/service/excel_vba/hour-workflow-or-report-repair?sb=t
 - 48-hour workflow build or repair: https://www.freelancer.com/service/zapier/hour-workflow-build-or-repair?sb=t
+- AI lead intake + CRM dashboard proof: https://adliebe.github.io/scoped-ops-proof/ai-lead-crm-dashboard-system.html
 - meeting notes to Planner proof: https://adliebe.github.io/scoped-ops-proof/tutorials/meeting-notes-planner-handoff.html
 - $500 fraud decision review proof: https://adliebe.github.io/scoped-ops-proof/fraud-decision-triage.html
 - business plan and financial model: https://www.upwork.com/services/product/consulting-hr-an-investor-ready-business-plan-and-financial-model-with-forecasts-2057624369756503073
